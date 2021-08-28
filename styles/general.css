@@ -1,0 +1,361 @@
+body {
+    background-color: #202020;
+    font-family: Ubuntu;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+a:hover {
+    color: #af05a9;
+}
+
+.fatherContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background-color: #202020;
+}
+
+.fatherContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background-color: #202020;
+}
+
+.mainContainer0 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+#leftNavContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    align-self: baseline;
+    align-items: center;
+    justify-content: center;
+    width: 7%;
+    height: 100vh;
+    background-color: #161616;
+}
+
+#rightNavContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    align-self: baseline;
+    align-items: center;
+    width: 7%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+#leftNavContainer2{
+    width: 6%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+#mainContainer1 {
+    width: 37%;
+    background-color: #202020;
+}
+
+#mainContainer2 {
+    width: 50%;
+    background-color: #202020;
+}
+
+#mainsCointainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1{
+    font-size: 90px;
+    font-variant: unset;
+    font-weight: bold;
+    color: white;
+}
+
+.h2{
+    font-size: 55px;
+    font-variant: unset;
+    font-weight: bold;
+    color: white;
+}
+
+/* Glowing contact me button */
+.button1 {
+    border:1px solid #af05a9;
+    outline: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#af05a9;
+	font-size:18px;
+	padding:15px 60px;
+	text-decoration:none;
+    position: relative;
+    z-index: 0;
+}
+
+.button1:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    /* Removed colors #fffb00, #48ff00 */
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(10px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+}
+
+.button1:active {
+    color: #FFFFFF;
+}
+
+.button1:active:after {
+    background: #202020;
+}
+
+.button1:hover:before {
+    opacity: 1;
+}
+
+.button1:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #202020;
+    border:  0px;
+    color: 202020;
+    left: 0;
+    top: 0;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/* Music equilizer animation */
+
+.equalizerContainer {
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+}
+    .equalizerBar1,
+    .equalizerBar2,
+    .equalizerBar3,
+    .equalizerBar4 {
+    display: inline-block;
+    
+    width: 9px;
+    margin-right: 6px;
+    transition: .5s;
+    animation: equalize 4s 0s infinite;
+    animation-timing-function: linear;
+    vertical-align: top;
+    }
+    
+    .equalizerBar1 {
+    height: 40px;
+    background: #081872;
+    transition: 0.5s;
+    animation-delay: -1.9s;
+    }
+    
+    .equalizerBar2 {
+    height: 48px;
+    background: #9cf310;
+    animation-delay: -2.9s;
+    }
+    
+    .equalizerBar3 {
+    height: 44px;
+    background: #ff00dd;
+    animation-delay: -3.9s;
+    }
+    
+    .equalizerBar4 {
+    height: 36px;
+    background: #ffa600;
+    animation-delay: -4.9s;
+    }
+
+
+@keyframes equalize {
+    0% {
+    height: 48px;
+    }
+    4% {
+    height: 42px;
+    }
+    8% {
+    height: 40px;
+    }
+    12% {
+    height: 30px;
+    }
+    16% {
+    height: 20px;
+    }
+    20% {
+    height: 30px;
+    }
+    24% {
+    height: 40px;
+    }
+    28% {
+    height: 10px;
+    }
+    32% {
+    height: 40px;
+    }
+    36% {
+    height: 48px;
+    }
+    40% {
+    height: 20px;
+    }
+    44% {
+    height: 40px;
+    }
+    48% {
+    height: 48px;
+    }
+    52% {
+    height: 30px;
+    }
+    56% {
+    height: 10px;
+    }
+    60% {
+    height: 30px;
+    }
+    64% {
+    height: 48px;
+    }
+    68% {
+    height: 30px;
+    }
+    72% {
+    height: 48px;
+    }
+    76% {
+    height: 20px;
+    }
+    80% {
+    height: 48px;
+    }
+    84% {
+    height: 38px;
+    }
+    88% {
+    height: 48px;
+    }
+    92% {
+    height: 20px;
+    }
+    96% {
+    height: 48px;
+    }
+    100% {
+    height: 48px;
+    }
+}
+
+  /* Typing Effect */
+.typingContainer {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.typing {
+    font-size: 51px;
+    font-weight: 300px;
+    color: white;
+    width: 19ch;
+    animation: typing 2.5s steps(19), blink .6s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+}
+
+@keyframes typing {
+    from {
+    width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+    border-color: transparent
+    }
+}
+
+/********/
+
+.button2 {
+    color: #ffffffc7;
+    border: 1px solid #ffffff6e;
+    padding: 25px;
+
+    width: 100%;
+    text-align: center;
+}
+
+.social {
+
+    
+}
+
+#insta {
+    font-size: 20px;
+    color: #ffffffc7;
+    position: relative;
+    bottom: -200%;
+    padding: 15px;
+    
+}
+
+
+/* COLOR PALLETE
+BLUE
+#1b56bd
+ROSE
+#af05a9
+
+*/
