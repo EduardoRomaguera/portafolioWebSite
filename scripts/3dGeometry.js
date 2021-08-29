@@ -21,7 +21,7 @@ const scene = new THREE.Scene()
 const geometry = new THREE.IcosahedronGeometry(5, 0);
 const geometry2 = new THREE.IcosahedronGeometry(0.9, 0);
 const geometry3 = new THREE.IcosahedronGeometry(0.9, 0);
-const geometry4 = new THREE.IcosahedronGeometry(1, 0);
+const geometry4 = new THREE.IcosahedronGeometry(0.2, 0);
 
 
 // Loading
@@ -44,22 +44,37 @@ material2.roughness = 0.1
 
 //red ball
 const material3 = new THREE.MeshPhysicalMaterial()
-material2.color = new THREE.Color(0xFFFFFF)
-material2.metalness = 0.6
-material2.roughness = 0.1
+material3.color = new THREE.Color(0xFFFFFF)
+material3.metalness = 0.6
+material3.roughness = 0.1
+
+//small ball
+const material4 = new THREE.MeshPhysicalMaterial()
+material4.color = new THREE.Color(0xFFFFFF)
+material4.metalness = 0.5
+material4.roughness = 0.1
 
 
 // Mesh
 const sphere = new THREE.Mesh(geometry,material)
 const point1 = new THREE.Mesh(geometry2,material2)
 const point2 = new THREE.Mesh(geometry2,material3)
-const point3 = new THREE.Mesh(geometry2,material3)
-const point4 = new THREE.Mesh(geometry2,material3)
+const point3 = new THREE.Mesh(geometry4,material4)
+sphere.castShadow = true;
+point1.castShadow = true;
+point2.castShadow = true;
+point3.castShadow = true;
+
+sphere.receiveShadow = true;
+point1.receiveShadow = true;
+point2.receiveShadow = true;
+point3.receiveShadow = true;
+
 scene.add(sphere)
 scene.add(point1)
 scene.add(point2)
 scene.add(point3)
-scene.add(point4)
+
 
 // Fog
 const fog = new THREE.Fog(0xb5b5b5, 1, 20);
@@ -87,9 +102,19 @@ const pointLight4 = new THREE.PointLight(0x2b00ff, 0.5)
 pointLight4.position.set(-10,10,2)
 scene.add(pointLight4)
 
+//SMALL WHITE
+const pointLight5 = new THREE.PointLight( 0x06bab7, 4, 4 );
+scene.add(pointLight5)
+
 //Z Orange
 const spotLight = new THREE.SpotLight( 0x8e4dff );
 spotLight.position.set( 0, 0, 30 );
+spotLight.castShadow = true;
+spotLight.shadow.mapSize.width = 512; // default
+spotLight.shadow.mapSize.height = 512; // default
+spotLight.shadow.camera.near = 0.5; // default
+spotLight.shadow.camera.far = 500; // default
+spotLight.shadow.focus = 1; // default
 scene.add( spotLight );
 
 //LightsHelpers
@@ -100,7 +125,7 @@ scene.add( spotLight );
 // scene.add( pointLightHelper2);
 // const pointLightHelper3 = new THREE.PointLightHelper( pointLight3, sphereSize );
 // scene.add( pointLightHelper3);
-// const pointLightHelper5 = new THREE.PointLightHelper( pointLight4, sphereSize );
+// const pointLightHelper5 = new THREE.PointLightHelper( pointLight5, sphereSize );
 // scene.add( pointLightHelper5);
 // const spotLightHelper = new THREE.SpotLightHelper( spotLight );
 // scene.add( spotLightHelper );
@@ -197,6 +222,13 @@ const tick = () =>
     point2.position.y = 8 * Math.sin(sphere.rotation.x)
     point2.position.z = 9 * Math.cos(-sphere.rotation.x)
 
+    point3.position.x = point2.position.x+ 1.5*Math.cos(3*sphere.rotation.x)
+    point3.position.y = point2.position.y+ 1.5*Math.sin(3*sphere.rotation.x)
+    point3.position.z = point2.position.z+ 1.5*Math.cos(3*sphere.rotation.x)
+
+    pointLight5.position.x = point3.position.x
+    pointLight5.position.y = point3.position.y
+    pointLight5.position.z = point3.position.z
     
     pointLight1.position.x = 8 * Math.sin(sphere.rotation.y+sphere.rotation.y)
     pointLight1.position.y = 8 * Math.cos(sphere.rotation.y)

@@ -18,26 +18,117 @@ const scene = new THREE.Scene()
 
 // Objects
 const geometry = new THREE.IcosahedronGeometry(1, 0);
-// const geometry2 = new THREE.SphereGeometry(1, 0);
-
-
-// const font = new THREE.Font('../fonts/ubuntu.json');
 
 const loader = new THREE.FontLoader();
-
 loader.load( '../fonts/ubuntu.json', function ( font ) {
-
-	const geometry2 = new THREE.TextGeometry( 'HTML', {
+	const text1 = new THREE.TextGeometry( 'HTML', {
 		font: font,
 		size: 1,
-		height: 0.1,
-		curveSegments: 0,
+		height: 0.01,
 		bevelEnabled: false,
 	} );
-
-
-
-
+    const text2 = new THREE.TextGeometry( 'CSS', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text3 = new THREE.TextGeometry( 'JAVASCRIPT', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text4 = new THREE.TextGeometry( 'THREE.JS', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text5 = new THREE.TextGeometry( 'NODE.JS', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text6 = new THREE.TextGeometry( 'JAVA', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text7 = new THREE.TextGeometry( 'C#', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text8 = new THREE.TextGeometry( 'OOP', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text9 = new THREE.TextGeometry( 'MONGODB', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text10 = new THREE.TextGeometry( 'SQL', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text11 = new THREE.TextGeometry( 'POSTMAN', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text12 = new THREE.TextGeometry( 'GITHUB', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text13 = new THREE.TextGeometry( 'BITBUCKET', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text14 = new THREE.TextGeometry( 'VISUAL STUDIO', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text15 = new THREE.TextGeometry( 'INTELLIJ IDEA', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text16 = new THREE.TextGeometry( 'ASANA', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+    const text17 = new THREE.TextGeometry( 'JIRA', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
+	const text18 = new THREE.TextGeometry( 'AGILE', {
+		font: font,
+		size: 1,
+		height: 0.01,
+		bevelEnabled: false,
+	} );
 
 // Loading
 const textureLoader = new THREE.TextureLoader()
@@ -64,19 +155,40 @@ material2.metalness = 0.6
 material2.roughness = 0.1
 
 //TEXT
-const material4 = new THREE.MeshBasicMaterial()
-material2.color = new THREE.Color(0xFFFFFF)
+const material4 = new THREE.MeshStandardMaterial()
+material4.color = new THREE.Color(0xFFFFFF)
+material4.metalness = 0.5
+material4.roughness = 0
+
 
 // Mesh
 const sphere = new THREE.Mesh(geometry,material)
-const point1 = new THREE.Mesh(geometry2,material4)
-const point2 = new THREE.Mesh(geometry2,material4)
+const t1 = new THREE.Mesh(text1,material4)
+const t2 = new THREE.Mesh(text2,material4)
+const t3 = new THREE.Mesh(text3,material4)
+const t4 = new THREE.Mesh(text4,material4)
+const t5 = new THREE.Mesh(text5,material4)
+const t6 = new THREE.Mesh(text6,material4)
+const t7 = new THREE.Mesh(text7,material4)
+const t8 = new THREE.Mesh(text8,material4)
+const t9 = new THREE.Mesh(text9,material4)
+const t10 = new THREE.Mesh(text10,material4)
+const t11 = new THREE.Mesh(text11,material4)
+const t12 = new THREE.Mesh(text12,material4)
+const t13 = new THREE.Mesh(text13,material4)
+const t14 = new THREE.Mesh(text14,material4)
+const t15 = new THREE.Mesh(text15,material4)
+const t16 = new THREE.Mesh(text16,material4)
+const t17 = new THREE.Mesh(text17,material4)
+const t18 = new THREE.Mesh(text17,material4)
 
 scene.add(sphere)
-scene.add(point1)
-scene.add(point2)
 
-
+for (let i = 1; i <= 18; i++) {
+	eval('t' + i).castShadow = true
+	eval('t' + i).receiveShadow = true
+    scene.add(eval('t' + i));
+}
 
 // Fog
 const fog = new THREE.Fog(0xb5b5b5, 1, 20);
@@ -85,42 +197,36 @@ scene.add(fog)
 
 // Lights
 //RED
-const pointLight1 = new THREE.PointLight(0xc22d2d, 2)
-pointLight1.position.set(10,10,2)
+const pointLight1 = new THREE.PointLight(0xcff0000, 0)
+pointLight1.position.set(10,10,10)
 scene.add(pointLight1)
 
 //BLUE
-const pointLight2 = new THREE.PointLight(0x2b00ff, 2)
-pointLight2.position.set(10,-10,2)
+const pointLight2 = new THREE.PointLight(0x0000ff, 0)
+pointLight2.position.set(10,-10,10)
 scene.add(pointLight2)
 
-//RED
-const pointLight3 = new THREE.PointLight(0xa83232, 0.5)
-pointLight3.position.set(-10,-10,2)
+//GREEN1
+const pointLight3 = new THREE.PointLight(0x00ff00, 0)
+pointLight3.position.set(-10,-10,10)
 scene.add(pointLight3)
 
-//BLUE
-const pointLight4 = new THREE.PointLight(0x2b00ff, 0.5)
-pointLight4.position.set(-10,10,2)
-scene.add(pointLight4)
-
 //Z Orange
-const spotLight = new THREE.SpotLight( 0x8e4dff );
-spotLight.position.set( 0, 0, 30 );
+const spotLight = new THREE.SpotLight( 0xffffff, 5, 30 );
+spotLight.position.set( 0, 0, 20 );
+spotLight.castShadow = true;
 scene.add( spotLight );
 
 //LightsHelpers
 // const sphereSize = 2;
-// const pointLightHelper = new THREE.PointLightHelper( pointLight1, sphereSize );
-// scene.add( pointLightHelper);
+// const pointLightHelper1 = new THREE.PointLightHelper( pointLight1, sphereSize );
+// scene.add( pointLightHelper1);
 // const pointLightHelper2 = new THREE.PointLightHelper( pointLight2, sphereSize );
 // scene.add( pointLightHelper2);
 // const pointLightHelper3 = new THREE.PointLightHelper( pointLight3, sphereSize );
 // scene.add( pointLightHelper3);
-// const pointLightHelper5 = new THREE.PointLightHelper( pointLight4, sphereSize );
-// scene.add( pointLightHelper5);
-// const spotLightHelper = new THREE.SpotLightHelper( spotLight );
-// scene.add( spotLightHelper );
+// const spotLightHelper4 = new THREE.SpotLightHelper( spotLight );
+// scene.add( spotLightHelper4 );
 
 //Sizes
 const sizes = {
@@ -145,7 +251,7 @@ window.addEventListener('resize', () =>
 })
 
 // Camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 3, 100)
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 9, 40)
 camera.position.x = 0
 camera.position.y = 0
 camera.position.z = 21
@@ -187,6 +293,7 @@ const tick = () =>
     targetY = mouseY * .002
 
     const elapsedTime = clock.getElapsedTime()
+    const ang = elapsedTime * Math.PI * .04
 
     // Update objects
     const num1 = Math.random()
@@ -196,32 +303,18 @@ const tick = () =>
     sphere.rotation.y += .4 * (targetX - sphere.rotation.y)
     sphere.rotation.x += .4 * (targetY - sphere.rotation.x)
 
+    const vector = new THREE.Vector3();
 
-    
-    point1.position.x = 8 * Math.sin(sphere.rotation.y+sphere.rotation.y)
-    point1.position.y = 8 * Math.cos(sphere.rotation.y)
-    point1.position.z = 9 * Math.sin(sphere.rotation.y)
-    
-    point2.position.x = 8 * Math.cos(sphere.rotation.x+sphere.rotation.x)
-    point2.position.y = 8 * Math.sin(sphere.rotation.x)
-    point2.position.z = 9 * Math.cos(-sphere.rotation.x)
+    for ( let i = 1, l = 18; i <= l; i ++ ) {
+        const phi = Math.acos( - 1 + ( 2 * i ) / l );
+        const theta = Math.sqrt(l * Math.PI) * phi+(-10-sphere.rotation.y)*10/Math.sqrt(l * Math.PI) / Math.sin(phi);
 
-    
-    pointLight1.position.x = 8 * Math.sin(sphere.rotation.y+sphere.rotation.y)
-    pointLight1.position.y = 8 * Math.cos(sphere.rotation.y)
-    pointLight1.position.z = 9 * Math.sin(sphere.rotation.y)
-
-    pointLight2.position.x = 8 * Math.cos(sphere.rotation.x+sphere.rotation.x)
-    pointLight2.position.y = 8 * Math.sin(sphere.rotation.x)
-    pointLight2.position.z = 9 * Math.cos(-sphere.rotation.x)
-
-
+        eval('t' + i).position.setFromSphericalCoords(8 , phi, theta);
+		eval('t' + i).position.x = eval('t' + i).position.x-3
+    }
 
     spotLight.position.x = 1 * Math.cos(sphere.rotation.x)
     spotLight.position.y = 1 * Math.sin(sphere.rotation.x)
-
-    // Update Orbital Controls
-    // controls.update()
 
     // Render
     renderer.render(scene, camera)

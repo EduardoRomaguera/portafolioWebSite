@@ -30,11 +30,43 @@ a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-
     background-color: #202020;
 }
 
+#colorBackground {
+    background-color: #202027;
+}
+
+#colorBackground2 {
+    background-color: #202727;
+}
+
 .mainContainer0 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+}
+.mainContainer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    background-color: #202020;
+}
+.mainContainer2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    background-color: #202020;
+}
+.mainContainer0b {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,26 +102,18 @@ a:hover {
     background-color: #202020;
 }
 
-#leftNavContainer2{
-    width: 6%;
-    height: 100vh;
-    background-color: #202020;
-}
-
 #mainContainer1 {
-    width: 37%;
+    width: 45%;
     background-color: #202020;
 }
 
-#mainContainer2 {
-    width: 50%;
-    background-color: #202020;
-}
 
-#mainsCointainer {
+
+.mainCointainer0 {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #21c1c7;
 }
 
 .h1{
@@ -104,13 +128,13 @@ a:hover {
     font-variant: unset;
     font-weight: bold;
     color: white;
+    margin-left: 10%;
 }
 
 /* Glowing contact me button */
 .button1 {
     border:1px solid #af05a9;
     outline: none;
-	display:inline-block;
 	cursor:pointer;
 	color:#af05a9;
 	font-size:18px;
@@ -351,6 +375,35 @@ a:hover {
     
 }
 
+.site-main{
+    background-color:green !important;
+    }
+    .scrolled1{
+    background-color:yellow !important;
+    }
+    .scrolled2{
+    background-color:pink !important;
+    }
+    .scrolled3{
+    background-color:black !important;
+    }
+    .scrolled4{
+    background-color:orange !important;
+    }
+    .scrolled5{
+    background-color:red !important;
+    }
+    .scrolled6 {
+    background-color: blue !important;
+    }
+
+
+    /* Map color filter */
+    .map {
+        width:100%;
+        height:100vh;
+        border:0;
+    }
 
 /* COLOR PALLETE
 BLUE

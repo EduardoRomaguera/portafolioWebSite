@@ -17,6 +17,16 @@
     <main>
         <div class="fatherContainer">
             <div id="leftNavContainer">
+                <input type="button" value="PLAY" onclick="play()">
+                <audio loop id="audio" src="music/DownbeatBeatdown.mp3"></audio>
+                <!-- Hey! look at you! reading my code! -->
+                <!-- Credit to Harris Heller for this amazing song find more on streambeats.com/-->
+                <div class="equalizerContainer">
+                    <i class="equalizerBar1"></i>
+                    <i class="equalizerBar2"></i>
+                    <i class="equalizerBar3"></i>
+                    <i class="equalizerBar4"></i>
+                </div>
                 <a href="#" class="button2">
                     Home
                 </a>
@@ -38,7 +48,6 @@
                     <a id="insta" href="https://www.linkedin.com/in/eromaguera/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div id="leftNavContainer2"></div>
                 <div class="fatherContainer2">
                     <!-- HOME SCREEN -->
                     <div class="mainContainer0">
@@ -60,7 +69,7 @@
                         </div>
                     </div>
                     <!-- TECHNOLOGIES SCREEN -->
-                    <div class="mainContainer0">
+                    <div class="mainContainer0" id="colorBackground">
                         <div class="mainContainer1">
                             <p class="h2">
                                 Here are some of the <br>
@@ -73,26 +82,64 @@
                             </p>
                         </div>
                     </div>
+                    <!-- CONTACT SCREEN -->
+                    <div class="mainContainer0" id="colorBackground2">
+                        <div class="mainContainer1">
+                            <p class="h2">
+                                Contact me <br>
+                            </p>
+                            <p>
+                                Send me an email and I will reply ASAP.
+                            </p>
+                            <form action="https://postmail.invotes.com/send"
+                            method="post" id="email_form">
+                            <input type="text" name="subject" placeholder="Subject" />
+                            <textarea name="text" placeholder="Message"></textarea>
+                            <input type="hidden" name="access_token" value="77t3ibd2pqmxuze5n7mbj3do" />
+                            <!-- return urls can be fully qualified -OR- start with / for root relative -OR- start with . for url relative --> 
+                            <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                            <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                        
+                            <!-- set the reply-to address --> <!-- <input type="text" name="reply_to" placeholder="Your Email" /> -->
+                        
+                            <!-- to append extra fields, use the extra_ prefix.Entries will be appended to your message body. -->
+                            <!-- <input type="text" name="extra_phone_number" placeholder="Phone Number" /> -->
+                        
+                            <!-- to split your message into 160 chars for an sms gateway -->
+                            <!-- <input type="hidden" name="sms_format" value="true" /> -->
+
+                            <input id="submit_form" type="submit" value="Send" />
+                            <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+                            <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+                        </form>
+                        </div>
+                        <div class="mainContainer2">
+
+                                <iframe class="map" 
+                                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1196898.97728572!2d-84.10384145108755!3d9.806968940405158!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1630176218700!5m2!1sen!2sus">
+                                </iframe>
+
+                        </div>
+                    </div>
                 </div>
-            <div id="rightNavContainer">
-                <input type="button" value="PLAY" onclick="play()">
-                <audio loop id="audio" src="music/DownbeatBeatdown.mp3"></audio>
-                <!-- Hey! look at you! reading my code! -->
-                <!-- Credit to Harris Heller for this amazing song find more on streambeats.com/-->
-                <div class="equalizerContainer">
-                    <i class="equalizerBar1"></i>
-                    <i class="equalizerBar2"></i>
-                    <i class="equalizerBar3"></i>
-                    <i class="equalizerBar4"></i>
-                </div>
-            </div>
         </div>
     </main>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
 
     <script src="scripts/services.js"></script>
     <script src="scripts/index.js"></script>
     <script type="module" src="scripts/3dGeometry.js"></script>
     <script type="module" src="scripts/3dTechnologies.js"></script>
+
+
+
+
+
 </body>
 
 </html>
