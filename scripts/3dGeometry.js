@@ -26,7 +26,7 @@ const geometry4 = new THREE.IcosahedronGeometry(0.2, 0);
 
 // Loading
 const textureLoader = new THREE.TextureLoader()
-const normalMap = textureLoader.load('../images/normalMap.png')
+const normalMap = textureLoader.load('images/normalMap.png')
 
 // Materials
 //Main object

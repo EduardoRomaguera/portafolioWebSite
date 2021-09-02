@@ -70,6 +70,7 @@ a:hover {
     display: flex;
     width: 100%;
     height: 100vh;
+
     background-color: #202020;
 }
 
@@ -122,7 +123,7 @@ text-align: right;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 160vh;
     background-color: #202020;
 }
 .s3Conteiner1{
@@ -131,7 +132,7 @@ text-align: right;
 .s3Conteiner1 p{
 text-align: center;
 margin: 0;
-padding: 5% 0 5% 0;
+padding: 2% 0 2% 0;
 }
 .s3Conteiner1b{
     display: flex;
@@ -140,6 +141,105 @@ padding: 5% 0 5% 0;
     height: 100vh;
     background-color: #202020;
     justify-content: space-evenly;
+}
+    /* Projects miniatures */
+.projectL1C1 {
+    display: flex;
+    width: 40%;
+    height: 45%;
+    background-color: #111111;
+    margin: 1%;
+    min-width: 35%;
+}
+
+.projectL2C1 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.projectL2C2 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.video{
+    padding: 35% 10% 0% 5%;
+    width: 100%;
+    height: 100%;
+}
+
+.projectL3C3{
+    padding: 0 0 5% 0;
+}
+
+.projectL3C1,
+.projectL3C2,
+.projectL3C3
+{
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+}
+
+.projectL3C1,
+.projectL3C3
+{
+    height: 20%;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.projectL3C2
+{
+    height: 60%;
+}
+
+.projectL3C1 p {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.projectL3C2 p {
+    margin: 5%;
+    color: rgb(200, 200, 200);
+    line-height: 150%;
+    text-align: justify;
+    background-color: transparent;
+
+}
+
+.projectL3C3 a
+{
+    outline: none;
+	cursor:pointer;
+    background-color: transparent;
+	font-size:18px;
+	text-decoration:none;
+    position: relative;
+    z-index: 0;
+    padding:10px 10px;
+}
+
+.projectL3C3 button:hover
+{
+    color: #4f05af;
+}
+.button2m:hover {
+    color: #FFFFFF;
+    user-select: none;
+}
+
+.projectL3C1 p
+{
+    color: #FFFFFF;
+
+
 }
 
 /* Section5 */
@@ -413,117 +513,12 @@ cursor: pointer;
     color: #4f05af;
 }
 
-.site-main{
-    background-color:green !important;
-    }
-    .scrolled1{
-    background-color:yellow !important;
-    }
-    .scrolled2{
-    background-color:pink !important;
-    }
-    .scrolled3{
-    background-color:black !important;
-    }
-    .scrolled4{
-    background-color:orange !important;
-    }
-    .scrolled5{
-    background-color:red !important;
-    }
-    .scrolled6 {
-    background-color: blue !important;
-    }
-
-
     /* Map color filter */
     .map {
         width:100%;
         height:100vh;
         border:0;
     }
-
-    /* Projects miniatures */
-.projectL1C1 {
-    display: flex;
-    width: 35%;
-    height: 30vh;
-    background-color: #111111;
-    margin: 1%;
-    min-width: 35%;
-}
-
-.projectL2C1 {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-
-.projectL2C2 {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    align-items: center;
-    justify-content: center;
-}
-
-.video{
-    width: 80%;
-    height: 80%;
-}
-
-.projectL3C1,
-.projectL3C2,
-.projectL3C3
-{
-    display: flex;
-    width: 100%;
-
-    background-color: transparent;
-}
-
-.projectL3C1,
-.projectL3C3
-{
-    height: 20%;
-    justify-content:space-evenly;
-    align-items: center;
-}
-
-.projectL3C2
-{
-    height: 60%;
-}
-
-.projectL3C3 button
-{
-    border:1px solid #4f05af;
-    outline: none;
-	cursor:pointer;
-	color:#ffffff;
-    background-color: transparent;
-	font-size:18px;
-	text-decoration:none;
-    position: relative;
-    z-index: 0;
-    padding:10px 10px;
-}
-
-.projectL3C3 button:hover
-{
-    color: #4f05af;
-}
-.button2m:hover {
-    color: #FFFFFF;
-    user-select: none;
-}
-
-.projectL3C1 p,
-.projectL3C2 p
-{
-    color: #FFFFFF;
-    background-color: transparent;
-}
 
 @-ms-viewport{
     width: device-width;
@@ -606,6 +601,16 @@ cursor: pointer;
         left: 7%;
         right: 0;
         /* BUG with canvas width */
+    }
+    /* Section 3 */
+    .s3Conteiner1b {
+        flex-direction: column;
+        border: solid 1px red;
+        flex-basis: 90%;
+        height: 200vh;
+    }
+    .projectL1C1{
+
     }
     /* Section 5 */
     .s5Conteiner0 {
