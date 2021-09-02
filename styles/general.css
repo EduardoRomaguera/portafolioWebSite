@@ -294,133 +294,6 @@ a:hover {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
-/* Music equilizer animation */
-
-.equalizerContainer {
-    display: inline-block;
-    cursor: pointer;
-    background: transparent;
-}
-    .equalizerBar1,
-    .equalizerBar2,
-    .equalizerBar3,
-    .equalizerBar4 {
-    display: inline-block;
-    
-    width: 9px;
-    margin-right: 6px;
-    transition: .5s;
-    animation: equalize 4s 0s infinite;
-    animation-timing-function: linear;
-    vertical-align: top;
-    }
-    
-    .equalizerBar1 {
-    height: 40px;
-    background: #081872;
-    transition: 0.5s;
-    animation-delay: -1.9s;
-    }
-    
-    .equalizerBar2 {
-    height: 48px;
-    background: #9cf310;
-    animation-delay: -2.9s;
-    }
-    
-    .equalizerBar3 {
-    height: 44px;
-    background: #ff00dd;
-    animation-delay: -3.9s;
-    }
-    
-    .equalizerBar4 {
-    height: 36px;
-    background: #ffa600;
-    animation-delay: -4.9s;
-    }
-
-
-@keyframes equalize {
-    0% {
-    height: 48px;
-    }
-    4% {
-    height: 42px;
-    }
-    8% {
-    height: 40px;
-    }
-    12% {
-    height: 30px;
-    }
-    16% {
-    height: 20px;
-    }
-    20% {
-    height: 30px;
-    }
-    24% {
-    height: 40px;
-    }
-    28% {
-    height: 10px;
-    }
-    32% {
-    height: 40px;
-    }
-    36% {
-    height: 48px;
-    }
-    40% {
-    height: 20px;
-    }
-    44% {
-    height: 40px;
-    }
-    48% {
-    height: 48px;
-    }
-    52% {
-    height: 30px;
-    }
-    56% {
-    height: 10px;
-    }
-    60% {
-    height: 30px;
-    }
-    64% {
-    height: 48px;
-    }
-    68% {
-    height: 30px;
-    }
-    72% {
-    height: 48px;
-    }
-    76% {
-    height: 20px;
-    }
-    80% {
-    height: 48px;
-    }
-    84% {
-    height: 38px;
-    }
-    88% {
-    height: 48px;
-    }
-    92% {
-    height: 20px;
-    }
-    96% {
-    height: 48px;
-    }
-    100% {
-    height: 48px;
-    }
-}
 
   /* Typing Effect */
 .typingContainer {
@@ -616,6 +489,7 @@ cursor: pointer;
 }
 
 @media all and (max-width: 960px){
+    /* Section 1 */
     .s1Conteiner0 {
         flex-direction: column;
         height: 100vh;
@@ -657,5 +531,26 @@ cursor: pointer;
         left: 7%;
         right: 0;
         /* BUG with canvas width */
+    }
+    /* Section 5 */
+    .s5Conteiner0 {
+        flex-direction: column;
+        border: solid 1px red;
+        align-items: center;
+    }
+    .s5Conteiner1{
+        padding: 5% 0 5% 0;
+        height: 60%;
+    }
+    .s5Conteiner1b{
+        padding-left: 7%;
+        width: 60%;
+        height: 30%;
+        overflow: visible;
+    }
+    .map {
+        width:100%;
+        height:100%;
+        border:0;
     }
 }
