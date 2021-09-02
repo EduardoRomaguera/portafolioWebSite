@@ -488,7 +488,7 @@ cursor: pointer;
     background-color: transparent;
 }
 
-@media all and (max-width: 1081px){
+@media only screen and (max-width: 1081px){
     /* Section 1 */
     .s1Conteiner0 {
         flex-direction: column;
