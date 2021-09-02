@@ -12,43 +12,39 @@ a:link, a:visited, a:active {
 }
 
 a:hover {
-    color: #af05a9;
+    color: #4f05af;
 }
 
 .fatherContainer {
     display: flex;
+    background-color: #202020;
+    overflow: hidden;
+}
+
+#leftNavContainer{
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    overflow: hidden;
+    align-self: baseline;
     align-items: center;
     justify-content: center;
-    width: 100%;
-
-    background-color: #202020;
+    width: 7%;
+    min-width: 100px;
+    min-height: 500px;
+    height: 100vh;
+    background-color: #111111;
 }
 
 .fatherContainer2 {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    margin-left: 7%;
+    width:100%;
     background-color: #202020;
+    border: solid 4px rgb(255, 145, 0);
 }
 
-#colorBackground {
-    background-color: #202027;
-}
-
-#colorBackground2 {
-    background-color: #202727;
-}
-
-.mainContainer0 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #202020;
-}
 .mainContainer1 {
     display: flex;
     flex-direction: column;
@@ -58,6 +54,147 @@ a:hover {
     height: 100vh;
     background-color: #202020;
 }
+
+/* Section 1 */
+.s1Conteiner0 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.s1Conteiner1{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items:flex-start;
+    padding-left: 5%;
+    justify-content: center;
+    background-color: #202020;
+}
+
+.s1Conteiner1b{
+    z-index: 2;
+    width: 50%;
+    padding-right: 5%;
+}
+/* Section2 */
+.s2Conteiner0{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.s2Conteiner1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.s5Conteiner1b {
+    width: 45%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+/* Section5 */
+.s5Conteiner0 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.s5Conteiner1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.s5Conteiner1b {
+    width: 45%;
+    height: 100vh;
+    background-color: #202020;
+}
+
+.contactTitle{
+    font-size: 55px;
+    font-variant: unset;
+    font-weight: bold;
+    color: white;
+    padding: 0 0 20px 0;
+}
+
+.contactText{
+    font-size: 18px;
+    font-variant:unset;
+    font-weight: lighter;
+    color: rgb(200, 200, 200);
+    padding: 0 0 40px 0;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 200px;
+}
+
+.contactInfo {
+    background-color: #303030;
+    color:#ffffff;
+    border: solid 2px #303030;
+    padding: 20px 10px 20px 10px;
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.contactInfo:active,
+.contactInfo:focus {
+    background-color: #464646;
+}
+
+.contactForm textarea {
+    width: 100%;
+    height: 120px;
+    min-width: 100%;
+    min-height: 120px;
+    max-height: 250px;
+    max-width: 100%;
+    font-family:'Ubuntu', sans-serif;
+}
+
+.sendEmail {
+    border:1px solid #303030;
+    background-color: #303030;
+    color: white;
+    width: 50%;
+    outline: none;
+	cursor:pointer;
+	font-size:18px;
+	padding:15px 60px;
+	text-decoration:none;
+    position: relative;
+    z-index: 0;
+}
+
+.sendEmail:hover{
+    color: #4f05af;
+}
+/* END */
+
+
 .mainContainer2 {
     display: flex;
     align-items: center;
@@ -74,40 +211,6 @@ a:hover {
     height: 100vh;
     background-color: #202020;
 }
-
-#leftNavContainer{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    overflow: hidden;
-    left: 0;
-    align-self: baseline;
-    align-items: center;
-    justify-content: center;
-    width: 7%;
-    height: 100vh;
-    background-color: #161616;
-}
-
-#rightNavContainer{
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    overflow: hidden;
-    right: 0;
-    align-self: baseline;
-    align-items: center;
-    width: 7%;
-    height: 100vh;
-    background-color: #202020;
-}
-
-#mainContainer1 {
-    width: 45%;
-    background-color: #202020;
-}
-
-
 
 .mainCointainer0 {
     display: flex;
@@ -133,10 +236,10 @@ a:hover {
 
 /* Glowing contact me button */
 .button1 {
-    border:1px solid #af05a9;
+    border:1px solid #4f05af;
     outline: none;
 	cursor:pointer;
-	color:#af05a9;
+	color:#ffffff;
 	font-size:18px;
 	padding:15px 60px;
 	text-decoration:none;
@@ -356,14 +459,36 @@ a:hover {
     color: #ffffffc7;
     border: 1px solid #ffffff6e;
     padding: 25px;
-
     width: 100%;
     text-align: center;
 }
 
-.social {
+.button2m {
+    color: #ffffffc7;
+    position: absolute;
+    top: 0px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
 
-    
+.music{
+    filter: invert(1) ;
+    width: 30px;
+    position: relative;
+    top: 10px;
+    padding: 0 0 0 15px;
+}
+
+.music {
+cursor: pointer;
+}
+
+.music:hover{
+    color: #4f05af;
+}
+
+.social {
 }
 
 #insta {
@@ -371,8 +496,10 @@ a:hover {
     color: #ffffffc7;
     position: relative;
     bottom: -200%;
-    padding: 15px;
-    
+    padding: 0 10px 0 0;
+}
+#insta:hover{
+    color: #4f05af;
 }
 
 .site-main{
@@ -405,10 +532,130 @@ a:hover {
         border:0;
     }
 
-/* COLOR PALLETE
-BLUE
-#1b56bd
-ROSE
-#af05a9
+    /* Projects miniatures */
+.projectL1C1 {
+    display: flex;
+    width: 35%;
+    height: 30vh;
+    
+    background-color: #111111;
+    margin: 1%;
+    min-width: 35%;
+}
 
-*/
+.projectL2C1 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.projectL2C2 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+}
+
+.video{
+    width: 80%;
+    height: 80%;
+}
+
+.projectL3C1,
+.projectL3C2,
+.projectL3C3
+{
+    display: flex;
+    width: 100%;
+
+    background-color: transparent;
+}
+
+.projectL3C1,
+.projectL3C3
+{
+    height: 20%;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.projectL3C2
+{
+    height: 60%;
+}
+
+.projectL3C3 button
+{
+    border:1px solid #4f05af;
+    outline: none;
+	cursor:pointer;
+	color:#ffffff;
+    background-color: transparent;
+	font-size:18px;
+	text-decoration:none;
+    position: relative;
+    z-index: 0;
+    padding:10px 10px;
+}
+
+.projectL3C3 button:hover
+{
+    color: #4f05af;
+}
+.button2m:hover {
+    color: #FFFFFF;
+    user-select: none;
+}
+
+.projectL3C1 p,
+.projectL3C2 p
+{
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+@media all and (max-width: 960px){
+    .s1Conteiner0 {
+        flex-direction: column;
+        height: 100vh;
+    }
+    .s1Conteiner1{
+        width: 100%;
+        align-self: center;
+        align-items: center;
+        padding-left: 0%;
+        padding-top: 15%;
+        border: solid 1px greenyellow;
+    }
+    .s1Conteiner1 h1{
+        text-align:center;
+        border:1px dotted #000;
+        padding:8px;}
+
+    .s1Conteiner1b{
+        border: solid 1px pink;
+        max-height: 50%;
+        width: 100%;
+        align-self: center;
+        overflow: hidden;
+
+    }
+    #Geometry1{
+        width: 100%;
+
+    }
+    #Geometry2{
+        padding: 0;
+        margin: auto;
+        display: block;
+        width: 100vw;
+        height: 600px;
+        position: absolute;
+        top: 45%;
+        bottom: 0;
+        left: 7%;
+        right: 0;
+        /* BUG with canvas width */
+    }
+}

@@ -77,9 +77,9 @@ scene.add(point3)
 
 
 // Fog
-const fog = new THREE.Fog(0xb5b5b5, 1, 20);
-// const fog = new THREE.FogExp2(0xa83232, 0.0005);
-scene.add(fog)
+// const fog = new THREE.Fog(0xb5b5b5, 1, 20);
+// // const fog = new THREE.FogExp2(0xa83232, 0.0005);
+// scene.add(fog)
 
 // Lights
 //RED
@@ -156,7 +156,7 @@ window.addEventListener('resize', () =>
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 3, 100)
 camera.position.x = 0
 camera.position.y = 0
-camera.position.z = 21
+camera.position.z = 24
 scene.add(camera)
 
 // Controls
@@ -223,8 +223,8 @@ const tick = () =>
     point2.position.z = 9 * Math.cos(-sphere.rotation.x)
 
     point3.position.x = point2.position.x+ 1.5*Math.cos(3*sphere.rotation.x)
-    point3.position.y = point2.position.y+ 1.5*Math.sin(3*sphere.rotation.x)
-    point3.position.z = point2.position.z+ 1.5*Math.cos(3*sphere.rotation.x)
+    point3.position.y = point2.position.y+ 1.5*Math.sin(2.8*sphere.rotation.x)
+    point3.position.z = point2.position.z+ 1.5*Math.cos(3.2*sphere.rotation.x)
 
     pointLight5.position.x = point3.position.x
     pointLight5.position.y = point3.position.y

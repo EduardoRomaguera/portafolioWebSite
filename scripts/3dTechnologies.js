@@ -191,24 +191,24 @@ for (let i = 1; i <= 18; i++) {
 }
 
 // Fog
-const fog = new THREE.Fog(0xb5b5b5, 1, 20);
-// const fog = new THREE.FogExp2(0xa83232, 0.0005);
-scene.add(fog)
+// const fog = new THREE.Fog(0xb5b5b5, 1, 20);
+// // const fog = new THREE.FogExp2(0xa83232, 0.0005);
+// scene.add(fog)
 
 // Lights
 //RED
-const pointLight1 = new THREE.PointLight(0xcff0000, 0)
-pointLight1.position.set(10,10,10)
+const pointLight1 = new THREE.PointLight(0xcff0000, 5, 5)
+pointLight1.position.set(0,0,5)
 scene.add(pointLight1)
 
 //BLUE
-const pointLight2 = new THREE.PointLight(0x0000ff, 0)
-pointLight2.position.set(10,-10,10)
+const pointLight2 = new THREE.PointLight(0x0000ff, 10, 5)
+pointLight2.position.set(0,0,5)
 scene.add(pointLight2)
 
 //GREEN1
-const pointLight3 = new THREE.PointLight(0x00ff00, 0)
-pointLight3.position.set(-10,-10,10)
+const pointLight3 = new THREE.PointLight(0x00ff00, 0, 5)
+pointLight3.position.set(0,0,5)
 scene.add(pointLight3)
 
 //Z Orange
@@ -254,7 +254,7 @@ window.addEventListener('resize', () =>
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 9, 40)
 camera.position.x = 0
 camera.position.y = 0
-camera.position.z = 21
+camera.position.z = 24
 scene.add(camera)
 
 // Controls
@@ -292,7 +292,7 @@ const tick = () =>
     targetX = mouseX * .002
     targetY = mouseY * .002
 
-    const elapsedTime = clock.getElapsedTime()
+    const elapsedTime = -clock.getElapsedTime()
     const ang = elapsedTime * Math.PI * .04
 
     // Update objects

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="icon" href="images/icon.png">
+    <link rel="icon" href="images/2icon.png">
     <script src="https://kit.fontawesome.com/731900e7f6.js" crossorigin="anonymous"></script>
     <title>Eduardo Romaguera, software developer</title>
 </head>
@@ -17,20 +17,17 @@
     <main>
         <div class="fatherContainer">
             <div id="leftNavContainer">
-                <input type="button" value="PLAY" onclick="play()">
-                <audio loop id="audio" src="music/DownbeatBeatdown.mp3"></audio>
+                <a class="button2m">
+                    <span id="audioBTN">Music</span>
+                    <img src="images/musicOFF.png" id="audioIconOFF" class="music" onclick=play()>
+                    <audio loop id="audioOFF" src="music/DownbeatBeatdown.mp3"></audio>
+                </a>
                 <!-- Hey! look at you! reading my code! -->
-                <!-- Credit to Harris Heller for this amazing song find more on streambeats.com/-->
-                <div class="equalizerContainer">
-                    <i class="equalizerBar1"></i>
-                    <i class="equalizerBar2"></i>
-                    <i class="equalizerBar3"></i>
-                    <i class="equalizerBar4"></i>
-                </div>
-                <a href="#" class="button2">
+                <!-- Credit to Harris Heller for this amazing song, find more on streambeats.com/-->
+                <a href="#homeScreen" class="button2">
                     Home
                 </a>
-                <a href="#" class="button2">
+                <a href="#technologiesScreen" class="button2">
                     Technologies
                 </a>
                 <a href="#" class="button2">
@@ -40,7 +37,7 @@
                     Resume
                     <a href="/images/myw3schoolsimage.jpg" download>
                 </a>
-                <a href="#" class="button2">
+                <a href="#contactScreen" class="button2">
                     Contact
                 </a>
                 <div class="social">
@@ -48,80 +45,69 @@
                     <a id="insta" href="https://www.linkedin.com/in/eromaguera/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-                <div class="fatherContainer2">
-                    <!-- HOME SCREEN -->
-                    <div class="mainContainer0">
-                        <div class="mainContainer1">
-                            <p class="h1">
-                                Hi! <br>
-                                I'm Eduardo, <br>
-                                <div class="typingContainer">
-                                    <div class="typing">software developer.</div> <br>
-                                </div>
-                                <br> <br> <br> <br>
-                                <a href="#" class="button1">Contact me!</a>
-                            </p>
-                        </div>
-                        <div class="mainContainer2">
-                            <p id="mainTitle">
-                                <canvas class="webgl"></canvas>
-                            </p>
-                        </div>
+            <div class="fatherContainer2">
+                <!-- HOME SCREEN -->
+                <div class="s1Conteiner0" id="homeScreen">
+                    <div class="s1Conteiner1">
+                        <p class="h1">
+                            Hi! <br>
+                            I'm Eduardo, <br>
+                            <div class="typingContainer">
+                                <div class="typing">software developer.</div> <br>
+                            </div>
+                            <br> <br> <br> <br>
+                            <a href="#" class="button1">Contact me!</a>
+                        </p>
                     </div>
-                    <!-- TECHNOLOGIES SCREEN -->
-                    <div class="mainContainer0" id="colorBackground">
-                        <div class="mainContainer1">
-                            <p class="h2">
-                                Here are some of the <br>
-                                Technologies I have used
-                            </p>
-                        </div>
-                        <div class="mainContainer2">
-                            <p id="mainTitle">
-                                <canvas class="webg2"></canvas>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- CONTACT SCREEN -->
-                    <div class="mainContainer0" id="colorBackground2">
-                        <div class="mainContainer1">
-                            <p class="h2">
-                                Contact me <br>
-                            </p>
-                            <p>
-                                Send me an email and I will reply ASAP.
-                            </p>
-                            <form action="https://postmail.invotes.com/send"
-                            method="post" id="email_form">
-                            <input type="text" name="subject" placeholder="Subject" />
-                            <textarea name="text" placeholder="Message"></textarea>
-                            <input type="hidden" name="access_token" value="77t3ibd2pqmxuze5n7mbj3do" />
-                            <!-- return urls can be fully qualified -OR- start with / for root relative -OR- start with . for url relative --> 
-                            <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
-                            <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
-                        
-                            <!-- set the reply-to address --> <!-- <input type="text" name="reply_to" placeholder="Your Email" /> -->
-                        
-                            <!-- to append extra fields, use the extra_ prefix.Entries will be appended to your message body. -->
-                            <!-- <input type="text" name="extra_phone_number" placeholder="Phone Number" /> -->
-                        
-                            <!-- to split your message into 160 chars for an sms gateway -->
-                            <!-- <input type="hidden" name="sms_format" value="true" /> -->
-
-                            <input id="submit_form" type="submit" value="Send" />
-                            <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
-                            <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
-                        </form>
-                        </div>
-                        <div class="mainContainer2">
-
-                                <iframe class="map" 
-                                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1196898.97728572!2d-84.10384145108755!3d9.806968940405158!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1630176218700!5m2!1sen!2sus">
-                                </iframe>
-
+                    <div class="s1Conteiner1b">
+                        <div id="Geometry1">
+                            <canvas width="900" class="webgl" id="Geometry2"></canvas>
                         </div>
                     </div>
                 </div>
+                <!-- TECHNOLOGIES SCREEN -->
+                <div class="s2Conteiner0" id="technologiesScreen">
+                    <div class="s2Conteiner1">
+                        <p class="h2">
+                            Here are some of the <br>
+                            technologies I have used
+                        </p>
+                    </div>
+                    <div class="s2Conteiner1b">
+                        <p id="mainTitle">
+                            <canvas class="webg2"></canvas>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CONTACT SCREEN -->
+                <div class="s5Conteiner0" id="contactScreen">
+                    <div class="s5Conteiner1">
+                        <div>
+                            <p class="contactTitle">Contact me</p>
+                        </div>
+                        <div>
+                            <p class="contactText">Send me an email and I will reply ASAP.</p>
+                        </div>
+                        <form class="contactForm" action="https://postmail.invotes.com/send"method="post" id="email_form">
+                            <input class="contactInfo" type="text" name="extra_name" placeholder="Name" />
+                            <input class="contactInfo" type="text" name="extra_email" placeholder="Email" />
+                            <input class="contactInfo" type="text" name="subject" placeholder="Subject" />
+                            <textarea class="contactInfo" name="text" placeholder="Message"></textarea>
+                            <input type="hidden" name="access_token" value="77t3ibd2pqmxuze5n7mbj3do" />
+                            <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                            <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                            <input class="sendEmail" id="submit_form" type="submit" value="Send" />
+                            <!-- Powered by postmail.invotes.com-->
+                        </form>
+                    </div>
+                    <div class="s5Conteiner1b">
+                        <iframe class="map" 
+                            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1196898.97728572!2d-84.10384145108755!3d9.806968940405158!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1630176218700!5m2!1sen!2sus">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -135,9 +121,6 @@
     <script src="scripts/index.js"></script>
     <script type="module" src="scripts/3dGeometry.js"></script>
     <script type="module" src="scripts/3dTechnologies.js"></script>
-
-
-
 
 
 </body>
