@@ -21,6 +21,17 @@ a:hover {
     overflow: hidden;
 }
 
+.colorText{
+    /* color: #000000;
+    background-color: rgb(255, 255, 255); */
+    font-style: italic;
+    font-size: 60px;
+}
+
+.Geometry1 {
+    z-index: -99;
+}
+
 #leftNavContainer{
     display: flex;
     flex-direction: column;
@@ -42,7 +53,6 @@ a:hover {
     margin-left: 7%;
     width:100%;
     background-color: #202020;
-    border: solid 4px rgb(255, 145, 0);
 }
 
 .mainContainer1 {
@@ -93,15 +103,43 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 55%;
+    width: 40%;
     height: 100vh;
     background-color: #202020;
 }
+.s2Conteiner1 p{
+text-align: right;
+
+}
 
 .s5Conteiner1b {
-    width: 45%;
+    width: 60%;
     height: 100vh;
     background-color: #202020;
+}
+/* Section3 */
+.s3Conteiner0{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+}
+.s3Conteiner1{
+
+}
+.s3Conteiner1 p{
+text-align: center;
+margin: 0;
+padding: 5% 0 5% 0;
+}
+.s3Conteiner1b{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    background-color: #202020;
+    justify-content: space-evenly;
 }
 
 /* Section5 */
@@ -244,7 +282,7 @@ a:hover {
 	padding:15px 60px;
 	text-decoration:none;
     position: relative;
-    z-index: 0;
+    z-index: 99;
 }
 
 .button1:before {
@@ -410,7 +448,6 @@ cursor: pointer;
     display: flex;
     width: 35%;
     height: 30vh;
-    
     background-color: #111111;
     margin: 1%;
     min-width: 35%;
@@ -488,6 +525,10 @@ cursor: pointer;
     background-color: transparent;
 }
 
+@-ms-viewport{
+    width: device-width;
+}
+
 @media only screen and (max-width: 1081px){
     /* Section 1 */
     .s1Conteiner0 {
@@ -500,7 +541,6 @@ cursor: pointer;
         align-items: center;
         padding-left: 0%;
         padding-top: 15%;
-        border: solid 1px greenyellow;
     }
     .s1Conteiner1 h1{
         text-align:center;
@@ -508,16 +548,13 @@ cursor: pointer;
         padding:8px;}
 
     .s1Conteiner1b{
-        border: solid 1px pink;
         max-height: 50%;
         width: 100%;
         align-self: center;
         overflow: hidden;
-
     }
     #Geometry1{
         width: 100%;
-
     }
     #Geometry2{
         padding: 0;
@@ -532,10 +569,47 @@ cursor: pointer;
         right: 0;
         /* BUG with canvas width */
     }
+    /* Section 2 */
+    .s2Conteiner0{
+        flex-direction: column;
+        align-items: center;
+    }
+    .s2Conteiner1{
+        width: 100%;
+        align-self: center;
+        align-items: center;
+        padding-left: 0%;
+        padding-top: 15%;
+    }
+    .s2Conteiner1 p{
+        position: absolute;
+        top: 110%;
+    }
+    .s2Conteiner1b{
+        max-height: 50%;
+        width: 100%;
+        align-self: center;
+        overflow: hidden;
+    }
+    #Geometry3{
+        width: 100%;
+    }
+    #Geometry4{
+        padding: 0;
+        margin: auto;
+        display: block;
+        width: 100vw;
+        height: 600px;
+        position: absolute;
+        top: 230%;
+        bottom: 0;
+        left: 7%;
+        right: 0;
+        /* BUG with canvas width */
+    }
     /* Section 5 */
     .s5Conteiner0 {
         flex-direction: column;
-        border: solid 1px red;
         align-items: center;
     }
     .s5Conteiner1{
@@ -547,10 +621,12 @@ cursor: pointer;
         width: 60%;
         height: 30%;
         overflow: visible;
+        padding-bottom: 5%;
     }
     .map {
         width:100%;
         height:100%;
         border:0;
+        padding-bottom: 10%;
     }
 }
