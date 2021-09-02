@@ -20,7 +20,23 @@ const scene = new THREE.Scene()
 const geometry = new THREE.IcosahedronGeometry(1, 0);
 
 const loader = new THREE.FontLoader();
-loader.load( '../fonts/ubuntu.json', function ( font ) {
+
+let scrFont = 'fonts/ubuntu.json';
+let file = new XMLHttpRequest();
+file.open('HEAD', scrFont, false);
+file.send();
+console.log(file);
+
+if (file.readyState == 4 && file.status == 404 ) {
+	scrFont = '/portafolioWebSite/fonts/ubuntu.json';
+} else {
+	console.log("File exists");
+}
+
+
+
+
+loader.load( scrFont, function ( font ) {
 	const text1 = new THREE.TextGeometry( 'HTML', {
 		font: font,
 		size: 1,
