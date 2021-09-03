@@ -5,6 +5,7 @@ body {
 
 html {
     font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
 }
 
 a:link, a:visited, a:active {
