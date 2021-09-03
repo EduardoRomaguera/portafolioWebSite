@@ -31,7 +31,7 @@ a:hover {
 .Geometry1 {
     z-index: -99;
 }
-
+/* Sidebar */
 #leftNavContainer{
     display: flex;
     flex-direction: column;
@@ -45,6 +45,19 @@ a:hover {
     min-height: 500px;
     height: 100vh;
     background-color: #111111;
+    transition: 0.4s;
+}
+
+.openbtn {
+    display: none;
+}
+
+a{
+    transition: 0.4s;
+}
+
+.closebtn {
+    display: none;
 }
 
 .fatherContainer2 {
@@ -526,6 +539,76 @@ cursor: pointer;
 }
 
 @media only screen and (max-width: 1081px){
+    /* Sidebar and Various */
+    #audioBTN{
+        font-size: 150%;
+        padding: 5%;
+        position: relative;
+        top: 13.5vh;
+    }
+    .music{
+        width: 60px;
+        position: relative;
+        top: 15vh;
+        justify-self: center;
+    }
+    #leftNavContainer{
+        /* display: flex;
+        flex-direction: column;
+        position:fixed;
+        overflow: hidden;
+        align-self: baseline;
+        align-items: center;
+        justify-content: center; */
+        width: 20%;
+        /* min-width: 100px;
+        min-height: 500px;
+        height: 100vh;
+        background-color: #111111; */
+    }
+    .button2{
+        font-size: 150%;
+        padding: 20% 0 20% 0;
+    }
+    #insta {
+        font-size: 60px;
+        color: #ffffffc7;
+        position: relative;
+        bottom: -50%;
+        display: block;
+        padding-bottom: 100%;
+    }
+    .closebtn {
+    position: absolute;
+    top: 20px;
+    font-size: 90px;
+    text-align: center;
+    color: white;
+    display:inline;
+    }
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 40px;
+        border: none;
+        width: 20%;
+        display: block;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+    }
+    .openbtn:hover {
+        background-color: #444;
+    }
+    #leftNavContainer{
+        display: none;
+    }
+    .fatherContainer2 {
+        margin-left: 0%;
+    }
+
     /* Section 1 */
     .s1Conteiner0 {
         flex-direction: column;
