@@ -604,14 +604,27 @@ cursor: pointer;
     }
     /* Section 3 */
     .s3Conteiner1b {
+        display: flex;
         flex-direction: column;
-        border: solid 1px red;
-        flex-basis: 90%;
-        height: 200vh;
+        flex-flow: column wrap;
+        width: 90%;
+        margin-left: 7%;
+        height:max-content;
+        background-color: #202020;
+        justify-content:center;
+        align-items: center;
+        border: solid 1px yellow;
     }
     .projectL1C1{
-
+        width: 80%;
+        height: 300px;
+        margin-bottom: 5%;
+        border: solid 1px rgb(253, 24, 24);
     }
+    .projectL1C1 p{
+        line-height: normal;
+    }
+
     /* Section 5 */
     .s5Conteiner0 {
         flex-direction: column;
