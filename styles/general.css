@@ -256,7 +256,7 @@ padding: 2% 0 2% 0;
 {
     color: #4f05af;
 }
-.button2m:hover {
+#audioBTN:hover {
     color: #FFFFFF;
     user-select: none;
 }
@@ -391,7 +391,7 @@ padding: 2% 0 2% 0;
 }
 
 .h2{
-    font-size: 55px;
+    font-size: 60px;
     font-variant: unset;
     font-weight: bold;
     color: white;
@@ -500,20 +500,30 @@ padding: 2% 0 2% 0;
     text-align: center;
 }
 
-.button2m {
+/* .button2m {
     color: #ffffffc7;
     position: absolute;
     top: 0px;
     padding: 5px;
     width: 100%;
     text-align: center;
+} */
+
+#audioBTN{
+    font-size: 17px;
+    color: #ffffffc7;
+    position: relative;
+    top: -5%;
+    text-align: center;
+    padding: 0 0 0 15px;
+    display: none;
 }
 
 .music{
     filter: invert(1) ;
     width: 30px;
     position: relative;
-    top: 10px;
+    top: -5%;
     padding: 0 0 0 15px;
 }
 
@@ -553,16 +563,18 @@ cursor: pointer;
 @media only screen and (max-width: 1081px){
     /* Sidebar and Various */
     #audioBTN{
-        font-size: 160%;
+        font-size: 170%;
         padding: 5%;
         position: relative;
         top: 13.5vh;
+        display: none;
     }
     .music{
-        width: 60px;
+        filter: invert(1) ;
+        width: 65px;
         position: relative;
-        top: 15vh;
-        justify-self: center;
+        top: -5%;
+        padding: 0 0 0 15px;
     }
     #leftNavContainer{
         /* display: flex;
@@ -579,16 +591,16 @@ cursor: pointer;
         background-color: #111111; */
     }
     .button2{
-        font-size: 160%;
+        font-size: 170%;
         padding: 20% 0 20% 0;
     }
     #insta {
         font-size: 60px;
         color: #ffffffc7;
         position: relative;
-        bottom: -50%;
+        bottom: -30%;
         display: block;
-        padding-bottom: 100%;
+        padding-bottom: 150%;
     }
     .closebtn {
     position: absolute;
@@ -599,13 +611,12 @@ cursor: pointer;
     display:inline;
     }
     .openbtn {
-        font-size: 20px;
+        font-size: 30px;
         cursor: pointer;
-        background-color: #111;
+        background-color: rgba(17, 17, 17, 0.555);
         color: white;
-        padding: 40px;
+        padding: 20px 40px 20px 40px;
         border: none;
-        width: 20%;
         display: block;
         position: fixed;
         top: 0%;
@@ -626,6 +637,29 @@ cursor: pointer;
     }
 
     /* Section 1 */
+    .h1{
+        font-size: 140px;
+        font-variant: unset;
+        font-weight: bold;
+        color: white;
+    }
+    .h2{
+        font-size: 90px;
+        font-variant: unset;
+        font-weight: bold;
+        color: white;
+        margin-left: 10%;
+    }
+    .colorText{
+        font-style: italic;
+        font-size: 90px;
+    }
+    .button1 {
+        font-size:50px;
+    }
+    .typing {
+        font-size: 80px;
+    }
     .s1Conteiner0 {
         flex-direction: column;
         margin: 0%;
@@ -731,7 +765,10 @@ cursor: pointer;
     .projectL3C1 p,
     .projectL3C2 p
     {
-        font-size: 150%;
+        font-size: 180%;
+    }
+    .projectL3C3 a{
+        font-size: 180%;
     }
 
 
@@ -757,15 +794,18 @@ cursor: pointer;
         border:0;
         padding-bottom: 10%;
     }
-    .contactTitle,
     .contactText,
     .contactInfo,
     .sendEmail{
-        font-size: 160%;
+        font-size: 180%;
     }
-    .contactTitle,
     .contactText{
-        font-size: 160%;
         text-align: center;
+    }
+    .contactForm{
+        width: 100%;
+    }
+    .contactTitle{
+        font-size: 90px;
     }
 }
