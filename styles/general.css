@@ -123,7 +123,7 @@ text-align: right;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 160vh;
+    height: max-content;
     background-color: #202020;
 }
 .s3Conteiner1{
@@ -138,7 +138,7 @@ padding: 2% 0 2% 0;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #202020;
     justify-content: space-evenly;
 }
@@ -146,7 +146,7 @@ padding: 2% 0 2% 0;
 .projectL1C1 {
     display: flex;
     width: 40%;
-    height: 45%;
+    height: auto;
     background-color: #111111;
     margin: 1%;
     min-width: 35%;
@@ -203,6 +203,7 @@ padding: 2% 0 2% 0;
 .projectL3C1 p {
     font-weight: bold;
     font-size: 120%;
+    padding: 5%;
 }
 
 .projectL3C2 p {
@@ -603,23 +604,26 @@ cursor: pointer;
         /* BUG with canvas width */
     }
     /* Section 3 */
+    .s3Conteiner0{
+        height: auto;
+    }
     .s3Conteiner1b {
         display: flex;
         flex-direction: column;
         flex-flow: column wrap;
         width: 90%;
         margin-left: 7%;
-        height:max-content;
+        height:auto;
         background-color: #202020;
         justify-content:center;
         align-items: center;
-        border: solid 1px yellow;
+        /* border: solid 1px yellow; */
     }
     .projectL1C1{
         width: 80%;
         height: 300px;
         margin-bottom: 5%;
-        border: solid 1px rgb(253, 24, 24);
+        /* border: solid 1px rgb(253, 24, 24); */
     }
     .projectL1C1 p{
         line-height: normal;
