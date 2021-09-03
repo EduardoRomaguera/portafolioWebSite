@@ -144,7 +144,7 @@ loader.load( scrFont, function ( font ) {
 
 // Loading
 const textureLoader = new THREE.TextureLoader()
-const normalMap = textureLoader.load('../images/normalMap.png')
+const normalMap = textureLoader.load('images/normalMap.png')
 
 // Materials
 //Main object
