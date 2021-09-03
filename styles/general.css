@@ -541,7 +541,7 @@ cursor: pointer;
 @media only screen and (max-width: 1081px){
     /* Sidebar and Various */
     #audioBTN{
-        font-size: 150%;
+        font-size: 160%;
         padding: 5%;
         position: relative;
         top: 13.5vh;
@@ -567,7 +567,7 @@ cursor: pointer;
         background-color: #111111; */
     }
     .button2{
-        font-size: 150%;
+        font-size: 160%;
         padding: 20% 0 20% 0;
     }
     #insta {
