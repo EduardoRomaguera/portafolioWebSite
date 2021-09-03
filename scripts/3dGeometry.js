@@ -132,15 +132,14 @@ scene.add( spotLight );
 
 //Sizes
 const sizes = {
-    width: window.innerWidth/2,
-    
+    width: window.innerWidth,
     height: window.innerHeight
 }
 
 window.addEventListener('resize', () =>
 {
     // Update sizes
-    sizes.width = window.innerWidth/2,
+    sizes.width = window.innerWidth,
     sizes.height = window.innerHeight
 
     // Update camera
