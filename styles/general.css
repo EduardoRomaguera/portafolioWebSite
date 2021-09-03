@@ -782,11 +782,9 @@ cursor: pointer;
         height: 60%;
     }
     .s5Conteiner1b{
-        padding-left: 7%;
-        width: 60%;
-        height: 30%;
+        width: 100%;
+        height: 40%;
         overflow: visible;
-        padding-bottom: 5%;
     }
     .map {
         width:100%;
@@ -798,12 +796,13 @@ cursor: pointer;
     .contactInfo,
     .sendEmail{
         font-size: 180%;
+        margin: 3%;
     }
     .contactText{
         text-align: center;
     }
     .contactForm{
-        width: 100%;
+        width: 125%;
     }
     .contactTitle{
         font-size: 90px;
