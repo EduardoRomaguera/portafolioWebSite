@@ -28,3 +28,4 @@ function closeNav() {
   document.getElementById("openBtn").style.display = "block";
   document.getElementById("fatherContainer2").style.marginLeft = "0%";
 }
+

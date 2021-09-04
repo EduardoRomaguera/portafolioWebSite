@@ -245,7 +245,8 @@ padding: 2% 0 2% 0;
 {
     outline: none;
 	cursor:pointer;
-    background-color: transparent;
+    background-color: #303030;
+    color: #FFFFFF;
 	font-size:18px;
 	text-decoration:none;
     position: relative;
@@ -253,7 +254,7 @@ padding: 2% 0 2% 0;
     padding:10px 10px;
 }
 
-.projectL3C3 button:hover
+.projectL3C3 a:hover
 {
     color: #4f05af;
 }
