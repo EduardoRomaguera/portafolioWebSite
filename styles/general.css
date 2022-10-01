@@ -232,6 +232,20 @@ padding: 2% 0 2% 0;
     padding: 5%;
 }
 
+.projectNews {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.projectNews a{
+    color: #95a9ff;
+}
+
 .projectL3C2 p {
     margin: 5%;
     color: rgb(200, 200, 200);
